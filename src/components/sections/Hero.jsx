@@ -43,12 +43,12 @@ export function Hero() {
             </div>
 
             <h1 className="hero-in hero-in-2" style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 'clamp(2.8rem,5.5vw,4.8rem)', fontWeight: 700, color: '#EEE8F5', lineHeight: 1.06, letterSpacing: '-0.025em', marginBottom: '20px' }}>
-              I Make Brands<br />
-              <em style={{ fontStyle: 'italic', color: '#C4A8CC' }}>Go Viral.</em>
+              I Build Scroll<br />
+              <em style={{ fontStyle: 'italic', color: '#C4A8CC' }}>Stopping Brands.</em>
             </h1>
 
             <p className="hero-in hero-in-3" style={{ fontSize: '17px', color: '#9090A8', lineHeight: 1.7, maxWidth: '420px', marginBottom: '36px' }}>
-              Social Media Manager &amp; Content Strategist.
+              Social Media Manager, Content Strategist & SEO Specialist helping brands grow through content, reels & digital storytelling.
             </p>
 
             <div className="hero-in hero-in-4 flex gap-3 flex-wrap" style={{ marginBottom: '52px' }}>
