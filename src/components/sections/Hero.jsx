@@ -48,7 +48,7 @@ export function Hero() {
             </h1>
 
             <p className="hero-in hero-in-3" style={{ fontSize: '17px', color: '#9090A8', lineHeight: 1.7, maxWidth: '420px', marginBottom: '36px' }}>
-              Social Media Manager &amp; Content Strategist specialising in skincare brands.
+              Social Media Manager &amp; Content Strategist.
             </p>
 
             <div className="hero-in hero-in-4 flex gap-3 flex-wrap" style={{ marginBottom: '52px' }}>
