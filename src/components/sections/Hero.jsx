@@ -24,7 +24,7 @@ export function Hero() {
     }
     const t1 = run(40, setEng, 1.8)
     const t2 = run(2, setReach, 1.8)
-    const t3 = run(7, setReels, 1.8)
+    const t3 = run(30, setReels, 1.8)
     return () => { clearInterval(t1); clearInterval(t2); clearInterval(t3) }
   }, [inView])
 
@@ -74,12 +74,12 @@ export function Hero() {
             <div ref={statsRef} className="hero-in hero-in-5 flex items-center gap-8 flex-wrap" style={{ paddingTop: '28px', borderTop: '1px solid #28283A' }}>
               <div>
                 <div style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '2rem', fontWeight: 700, color: '#EEE8F5', lineHeight: 1 }}>{eng}%+</div>
-                <div style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#9090A8', marginTop: '5px' }}>Engagement</div>
+                <div style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#9090A8', marginTop: '5px' }}>Meta ads and content strategy</div>
               </div>
               <div style={{ width: '1px', height: '36px', background: '#28283A' }} />
               <div>
                 <div style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '2rem', fontWeight: 700, color: '#EEE8F5', lineHeight: 1 }}>{reach}x</div>
-                <div style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#9090A8', marginTop: '5px' }}>Reach Growth</div>
+                <div style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#9090A8', marginTop: '5px' }}>Organic reach and engagement growth</div>
               </div>
               <div style={{ width: '1px', height: '36px', background: '#28283A' }} />
               <div>
@@ -132,13 +132,7 @@ function HeroVideo({ src }) {
         </button>
       </div>
 
-      <div style={{ position: 'absolute', bottom: '-16px', left: '-20px', background: '#16161E', border: '1px solid #28283A', borderRadius: '14px', padding: '10px 16px', boxShadow: '0 8px 24px rgba(0,0,0,0.09)', display: 'flex', alignItems: 'center', gap: '9px' }}>
-        <span className="pulse-dot" style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#4ADE80', display: 'block', flexShrink: 0 }} />
-        <div>
-          <div style={{ fontSize: '9px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#8888A0', marginBottom: '2px' }}>Currently at</div>
-          <div style={{ fontSize: '13px', fontWeight: 700, color: '#C4A8CC', lineHeight: 1 }}>Zobha Skincare</div>
-        </div>
-      </div>
+      
     </div>
   )
 }

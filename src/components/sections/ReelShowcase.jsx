@@ -8,6 +8,9 @@ import vid3 from '../../assets/WhatsApp Video 2026-04-30 at 9.40.05 PM (2).mp4'
 import vid4 from '../../assets/WhatsApp Video 2026-04-30 at 9.40.05 PM (3).mp4'
 import vid5 from '../../assets/WhatsApp Video 2026-04-30 at 9.40.05 PM (4).mp4'
 import vid6 from '../../assets/WhatsApp Video 2026-04-30 at 9.40.05 PM (5).mp4'
+import inf1 from '../../assets/influencer1.mp4'
+import inf2 from '../../assets/influencer2.mp4'
+import brand1 from '../../assets/brand1.mp4'
 
 const categories = [
   {
@@ -15,21 +18,21 @@ const categories = [
     label: '01',
     title: 'Influencer Collaborations',
     description: 'Real creators, real results — UGC-style content designed for trust, reach, and conversions.',
-    videos: [vid0, vid1, vid2],
+    videos: [vid6, vid1, vid2,inf1, inf2],
   },
   {
     id: 'scripted',
     label: '02',
     title: 'Scripted by Me',
     description: 'Every word crafted to hook, educate, and convert — from opening line to final CTA.',
-    videos: [vid3, vid4],
+    videos: [vid3, vid4, vid6],
   },
   {
     id: 'brand',
     label: '03',
     title: 'Brand Content',
-    description: 'Aesthetic, on-brand reels that tell the Zobha story and drive meaningful engagement.',
-    videos: [vid5, vid6],
+    description: 'Aesthetic, on-brand reels that tell the brand story and drive meaningful engagement.',
+    videos: [vid5, vid6, brand1],
   },
 ]
 
@@ -77,7 +80,7 @@ function Lightbox({ videos, startIdx, onClose }) {
         </button>
 
         <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 32px 80px rgba(0,0,0,0.7)' }}>
-          <video ref={ref} src={videos[idx]} loop playsInline muted={muted} style={{ display: 'block', maxHeight: '82vh', maxWidth: 'min(400px, 90vw)', width: '100%', borderRadius: '16px' }} />
+          <video ref={ref} src={videos[idx]} loop playsInline muted={muted} style={{ display: 'block', maxHeight: '74vh', maxWidth: 'min(320px, 88vw)', width: '100%', borderRadius: '16px' }} />
           <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '12px 14px', background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%)', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '8px' }}>
             <button onClick={togglePlay} style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', cursor: 'pointer' }}>
               {playing ? <Pause size={12} fill="white" color="white" /> : <Play size={12} fill="white" color="white" style={{ marginLeft: '1px' }} />}
@@ -158,7 +161,7 @@ function CategorySection({ cat, bg }) {
         <FadeIn>
           {cat.videos.length === 3 ? (
             /* 3 videos: 1 featured left + 2 stacked right, capped width */
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px', alignItems: 'stretch', maxWidth: '560px', margin: '0 auto' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', alignItems: 'stretch', maxWidth: '460px', margin: '0 auto' }}>
               <ReelCard src={cat.videos[0]} onOpen={() => setLightboxIdx(0)} />
               <div style={{ display: 'grid', gridTemplateRows: '1fr 1fr', gap: '14px' }}>
                 <ReelCard src={cat.videos[1]} onOpen={() => setLightboxIdx(1)} />
@@ -167,7 +170,7 @@ function CategorySection({ cat, bg }) {
             </div>
           ) : (
             /* 2 videos: side by side, centred, capped width */
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '14px', maxWidth: '680px', margin: '0 auto' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px', maxWidth: '560px', margin: '0 auto' }}>
               {cat.videos.map((src, i) => (
                 <ReelCard key={i} src={src} onOpen={() => setLightboxIdx(i)} />
               ))}

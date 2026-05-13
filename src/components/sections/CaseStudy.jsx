@@ -32,8 +32,8 @@ function Metric({ icon: Icon, value, suffix, label }) {
   )
 }
 
-const before = ['Low engagement across all posts', 'No content calendar or strategy', 'Weak hooks & captions', 'Zero influencer activity']
-const after  = ['Trend-based reels with strong hooks', 'Structured monthly content calendar', 'Influencer collabs & UGC campaigns', 'Meta ads with conversion creatives']
+const before = ['Low engagement across all posts', 'Weak content calendar or strategy', 'Weak hooks & captions', 'Less influencer activity']
+const after  = ['Trend-based reels with strong hooks and built own content', 'Structured monthly content calendar', 'Influencer collabs & UGC campaigns', 'Meta ads with conversion creatives']
 
 export function CaseStudy() {
   return (

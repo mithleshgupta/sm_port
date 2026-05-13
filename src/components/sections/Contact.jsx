@@ -3,7 +3,7 @@ import { FadeIn } from '../ui/FadeIn'
 
 const links = [
   { href: 'mailto:Poojaasingh1100@gmail.com', icon: Mail,          label: 'Email Me' },
-  { href: 'https://instagram.com/yourhandle', icon: Camera,        label: 'Instagram' },
+  { href: 'https://www.instagram.com/wtfffpooja/', icon: Camera,        label: 'Instagram' },
   { href: 'https://wa.me/yourwhatsapp',       icon: MessageCircle, label: 'WhatsApp' },
 ]
 

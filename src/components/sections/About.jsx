@@ -2,10 +2,10 @@
 import profileImg from '../../assets/png (4).png'
 
 const values = [
-  { label: 'Results-Driven',  sub: 'Every post tied to a measurable goal' },
-  { label: 'Trend-Aware',     sub: 'Always ahead of the curve' },
-  { label: 'Skin Specialist', sub: 'Deep niche & category knowledge' },
-  { label: 'Consistent',      sub: 'Reliable delivery, every single week' },
+  { label: 'Results-Driven',   sub: 'Every post tied to a measurable goal' },
+  { label: 'Trend-Aware',      sub: 'Always ahead of the curve' },
+  { label: 'Brand Versatile',  sub: 'Lifestyle, beauty, fashion & beyond' },
+  { label: 'Consistent',       sub: 'Reliable delivery, every single week' },
 ]
 
 export function About() {
@@ -29,10 +29,13 @@ export function About() {
           <FadeIn direction="right">
             <span style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C4A8CC', display: 'block', marginBottom: '14px' }}>About Me</span>
             <h2 style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 'clamp(2rem,4vw,3rem)', fontWeight: 700, color: '#EEE8F5', lineHeight: 1.1, marginBottom: '20px' }}>
-              The Person <em style={{ fontStyle: 'italic', color: '#C4A8CC' }}>Behind the Strategy</em>
+              Hi, I&apos;m <em style={{ fontStyle: 'italic', color: '#C4A8CC' }}>Pooja Singh</em>
             </h2>
+            <p style={{ fontSize: '15px', color: '#9090A8', lineHeight: 1.75, maxWidth: '440px', marginBottom: '12px' }}>
+              I&apos;m a <strong style={{ color: '#EEE8F5', fontWeight: 600 }}>Social Media Manager &amp; Content Strategist</strong> focused on creating content that connects, engages, and drives real results.
+            </p>
             <p style={{ fontSize: '15px', color: '#9090A8', lineHeight: 1.75, maxWidth: '440px', marginBottom: '28px' }}>
-              I&apos;m a <strong style={{ color: '#EEE8F5', fontWeight: 600 }}>Social Media Manager &amp; Content Strategist</strong> who turns brand stories into scroll-stopping content. I plan, create, and optimise every piece of content to drive measurable growth.
+              My hands-on experience with consumer brands has taught me how to turn audience needs into content that builds trust and growth — and that translates across <strong style={{ color: '#C4A8CC', fontWeight: 600 }}>any industry, any niche</strong>.
             </p>
             <div className="grid grid-cols-2 gap-3">
               {values.map(({ label, sub }) => (

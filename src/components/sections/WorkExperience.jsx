@@ -1,12 +1,12 @@
 ﻿import { useEffect, useRef } from 'react'
 import { FadeIn } from '../ui/FadeIn'
-import { Check, MapPin } from 'lucide-react'
+import { Check, MapPin, Wrench, Lightbulb } from 'lucide-react'
 
 const experiences = [
   {
     title: 'Social Media Manager',
     company: 'Zobha Skincare Brand',
-    period: '2025 – Present',
+    period: '2024 – 2025',
     type: 'Full-time',
     current: true,
     tasks: [
@@ -21,18 +21,26 @@ const experiences = [
   },
   {
     title: 'SEO Executive',
-    company: 'Ardas Interior',
-    period: '2024 – 2025',
+    company: 'Ardas',
+    period: '2025 – November 2025',
     type: 'Full-time',
     current: false,
+    description: 'Worked on improving website visibility, content optimization, and search performance through strategic SEO practices and digital marketing support.',
     tasks: [
-      'Managed & optimized website on Shopify & Odoo',
-      'On-page SEO, keyword research & content optimization',
-      'Off-page SEO activities and backlink building',
-      'Fixed technical SEO issues & improved site structure',
-      'Optimized product pages, meta tags & internal linking',
-      'Monitored performance and organic growth',
+      'Conducted keyword research for targeted content strategy',
+      'Optimized meta titles, descriptions, and website structure',
+      'Worked on on-page SEO and content readability',
+      'Assisted with website audits and competitor analysis',
+      'Supported organic growth strategies for brand visibility',
+      'Managed SEO-focused content improvements',
     ],
+    tools: ['Google Search Console', 'Google Analytics', 'Ahrefs', 'SEMrush', 'Ubersuggest', 'Yoast SEO'],
+    skills: ['On-Page SEO', 'Keyword Research', 'Technical SEO Basics', 'Content Optimization', 'SEO Audits', 'Competitor Research', 'Organic Growth Strategy'],
+    caseStudy: {
+      title: 'Website Optimization Project',
+      desc: 'Improved website structure and content organization using SEO-focused practices.',
+      focus: ['Keyword placement optimization', 'Meta tag enhancement', 'Content readability improvement', 'Internal linking structure', 'Search visibility support'],
+    },
     results: ['+30–40% Organic Traffic', '2–3 Keywords Page 1', 'Improved Indexing', 'Stronger Brand Presence'],
   },
 ]
@@ -98,6 +106,10 @@ function ExperienceEntry({ exp, isLast }) {
             </span>
           </div>
 
+          {exp.description && (
+            <p style={{ fontSize: '13.5px', color: '#9090A8', lineHeight: 1.7, marginTop: '10px' }}>{exp.description}</p>
+          )}
+
           <div style={{ height: '1px', background: '#28283A', margin: '20px 0' }} />
 
           <div className="grid sm:grid-cols-2 gap-3" style={{ marginBottom: '22px' }}>
@@ -107,6 +119,52 @@ function ExperienceEntry({ exp, isLast }) {
               </div>
             ))}
           </div>
+
+          {/* Tools & Skills */}
+          {(exp.tools || exp.skills) && (
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px', marginBottom: '22px' }}>
+              {exp.tools && (
+                <div style={{ background: '#1A1028', border: '1px solid #2E2040', borderRadius: '12px', padding: '16px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '7px', marginBottom: '12px' }}>
+                    <Wrench size={12} style={{ color: '#C4A8CC' }} />
+                    <span style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '0.13em', textTransform: 'uppercase', color: '#C4A8CC' }}>SEO Tools</span>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                    {exp.tools.map(tool => (
+                      <span key={tool} style={{ fontSize: '12.5px', color: '#C0C0D0' }}>· {tool}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {exp.skills && (
+                <div style={{ background: '#1A1028', border: '1px solid #2E2040', borderRadius: '12px', padding: '16px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '7px', marginBottom: '12px' }}>
+                    <Lightbulb size={12} style={{ color: '#C4A8CC' }} />
+                    <span style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '0.13em', textTransform: 'uppercase', color: '#C4A8CC' }}>Skills</span>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                    {exp.skills.map(skill => (
+                      <span key={skill} style={{ fontSize: '12.5px', color: '#C0C0D0' }}>· {skill}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Mini Case Study */}
+          {exp.caseStudy && (
+            <div style={{ background: 'rgba(196,168,204,0.05)', border: '1px solid rgba(196,168,204,0.18)', borderRadius: '12px', padding: '18px 20px', marginBottom: '22px' }}>
+              <span style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '0.13em', textTransform: 'uppercase', color: '#C4A8CC', display: 'block', marginBottom: '6px' }}>Mini Case Study</span>
+              <h4 style={{ fontSize: '14px', fontWeight: 700, color: '#EEE8F5', marginBottom: '5px' }}>{exp.caseStudy.title}</h4>
+              <p style={{ fontSize: '12.5px', color: '#9090A8', lineHeight: 1.6, marginBottom: '12px' }}>{exp.caseStudy.desc}</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                {exp.caseStudy.focus.map(f => (
+                  <span key={f} style={{ fontSize: '11px', padding: '3px 10px', borderRadius: '100px', background: 'rgba(196,168,204,0.1)', border: '1px solid rgba(196,168,204,0.2)', color: '#C4A8CC' }}>{f}</span>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '7px' }}>
             {exp.results.map(r => (
@@ -137,12 +195,7 @@ export function WorkExperience() {
           <ExperienceEntry key={exp.company} exp={exp} isLast={i === experiences.length - 1} />
         ))}
 
-        {/* Currently active indicator */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', paddingLeft: '52px', marginTop: '-4px' }}>
-          <span className="pulse-dot" style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#4ADE80', display: 'inline-block', flexShrink: 0 }} />
-          <span style={{ fontSize: '12px', color: '#8A8A98', fontStyle: 'italic' }}>Currently active at Zobha Skincare</span>
-        </div>
-
+      
       </div>
     </section>
   )

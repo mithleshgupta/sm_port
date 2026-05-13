@@ -11,18 +11,13 @@ export function Footer() {
             onMouseLeave={e => e.currentTarget.style.color = '#9090A8'}>
             <Mail size={17} />
           </a>
-          <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+          <a href="https://www.instagram.com/wtfffpooja/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
             style={{ color: '#9090A8', transition: 'color 0.2s' }}
             onMouseEnter={e => e.currentTarget.style.color = '#C4A8CC'}
             onMouseLeave={e => e.currentTarget.style.color = '#9090A8'}>
             <Camera size={17} />
           </a>
-          <a href="https://wa.me/yourwhatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
-            style={{ color: '#9090A8', transition: 'color 0.2s' }}
-            onMouseEnter={e => e.currentTarget.style.color = '#C4A8CC'}
-            onMouseLeave={e => e.currentTarget.style.color = '#9090A8'}>
-            <MessageCircle size={17} />
-          </a>
+         
         </div>
         <p style={{ fontSize: '12px', color: 'rgba(160,160,170,0.5)' }}>© 2026 · Social Media Manager &amp; Content Strategist</p>
       </div>
